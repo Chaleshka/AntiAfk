@@ -13,9 +13,9 @@ namespace AntiAFk
         public RoleType role;
         public Vector3 Position, Rotation;
         public int timer = 0;
-        public float energy, experience;
 
         public Camera079 camera;
         public float pitch, rot;
+        public float energy, experience;
     }
 }
