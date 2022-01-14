@@ -126,7 +126,7 @@ namespace AntiAFk
                                 ReplacePlayer(Player.Get(ply.id));
                             }
                             if (AntiAfk.cfg.ReplacePlayer && AntiAfk.cfg.MessageAboutKickToLog && repl)
-                                msToLog.Send("bans", string.Format("```diff\n[0;32mAntiAFK[0m\n{0} ({1}) был кикнут за afk и заменен другим игроком.\n```", Player.Get(ply.id).Nickname, Player.Get(ply.id).UserId));
+                                msToLog.Send("bans", string.Format("```ansi\n[0;32mAntiAFK[0m\n{0} ({1}) был кикнут за afk и заменен другим игроком.\n```", Player.Get(ply.id).Nickname, Player.Get(ply.id).UserId));
                             else if (AntiAfk.cfg.MessageAboutKickToLog)
                                 msToLog.Send("bans", string.Format("```ansi\n[0;32mAntiAFK[0m\n{0} ({1}) был кикнут за afk.\n```", Player.Get(ply.id).Nickname, Player.Get(ply.id).UserId));
 
