@@ -19,10 +19,10 @@ namespace AntiAFk
         public int TimeToKick { get; private set; } = 15;
 
         [Description("{0} - кол-во секунд до кика.")]
-        public string Message { get; private set; } = "<color=#00A287> Начните двигаться, иначе вы будите кикнуты через <color=red>{0}</color> сек.</color>";
+        public string Message { get; private set; } = "<color=#00A287> Начните двигаться, иначе вы будете кикнуты через <color=red>{0}</color> сек.</color>";
 
         [Description("{0} - кол-во секунд до кика.")]
-        public string MessageToScp079 { get; private set; } = "<color=#00A287> Начните двигать камерой, иначе вы будите кикнуты через <color=red>{0}</color> сек.</color>";
+        public string MessageToScp079 { get; private set; } = "<color=#00A287> Начните двигать камерой, иначе вы будете кикнуты через <color=red>{0}</color> сек.</color>";
 
         [Description("Сообщение, с которым кикнет игрока.")]
         public string KickMessage { get; private set; } = "AFK";
