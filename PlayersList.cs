@@ -11,8 +11,10 @@ namespace AntiAFk
     {
         public int id;
         public RoleType role;
-        public Vector3 Position, Rotation;
         public int timer = 0;
+        public bool ignorAFK = false;
+
+        public Vector3 Position, Rotation;
 
         public Camera079 camera;
         public float pitch, rot;

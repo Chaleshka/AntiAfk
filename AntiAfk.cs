@@ -17,7 +17,9 @@ namespace AntiAFk
         public override Version Version { get; } = new Version(1, 0, 0);
         public override Version RequiredExiledVersion { get; } = new Version(4, 2, 2);
 
-        public override PluginPriority Priority { get; } = PluginPriority.Medium;
+        public override PluginPriority Priority { get; } = PluginPriority.Highest;
+
+        public static List<PlayersList> pl;
 
         public static PConfig cfg;
 
@@ -33,6 +35,8 @@ namespace AntiAFk
             Handlers.Server.RoundEnded += ev.onRoundEnded;
             Handlers.Player.ChangingRole += ev.onChangingRole;
             Handlers.Player.Left += ev.OnLeave;
+            Handlers.Server.RoundStarted += onRoundStarted;
+            Log.Info("AntiAFk was created by Chalęshka.");
         }
 
         public override void OnDisabled()
@@ -43,9 +47,15 @@ namespace AntiAFk
             Handlers.Server.RoundEnded -= ev.onRoundEnded;
             Handlers.Player.ChangingRole -= ev.onChangingRole;
             Handlers.Player.Left -= ev.OnLeave;
+            Handlers.Server.RoundStarted -= onRoundStarted;
 
             cfg = null;
             ev = null;
+        }
+
+        public void onRoundStarted()
+        {
+            pl = new List<PlayersList>();
         }
     }
 }
