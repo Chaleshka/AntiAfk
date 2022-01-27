@@ -298,11 +298,6 @@ namespace AntiAFk
                     }
                 }
             }
-            if (arguments.Count == 0)
-            {
-                response = "Команда введена неверно.";
-                return false;
-            }
             response = "Команда введена неверно.";
             return false;
         }
