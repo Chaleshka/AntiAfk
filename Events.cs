@@ -48,7 +48,7 @@ namespace AntiAFk
                 pl.Remove(pl.Find(p => p.id == ev.Player.Id));
             }
         }
-        public void OnLeave(LeftEventArgs ev)
+        public void OnLeave(DestroyingEventArgs ev)
         {
             if (!roundEnded)
             {
